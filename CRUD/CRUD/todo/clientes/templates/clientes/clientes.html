@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+
+{% block title %} lista de clientes{% endblock %}
+
+{%block content%}
+
+<table class="table">
+     <thead>
+       <tr>
+         <th scope="col">ID</th>
+         <th scope="col">Nome</th>
+         <th scope="col">Tipo</th>
+         <th scope="col">Modelo Veiculo</th>
+         <th scope="col">Placa Veiculo</th>
+         <th scope="col">email</th>
+         <th scope="col">data entrada</th>
+         <th scope="col">data saida</th>
+
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <th scope="row">{{cliente.id}}</th>
+         <td>{{cliente.nome}}</td>
+         <td>{{cliente.tipo}}</td>
+         <td>{{cliente.Modelo_Veiculo}}</td>
+         <td>{{cliente.Placa_Veiculo}}</td>
+         <td>{{cliente.email}}</td>
+         <td>{{cliente.created_at}}</td>
+         <td>{{cliente.updated_at}}</td>
+       </tr>
+      
+     </tbody>
+   </table>
+
+<!--
+<div class="offset-1 col-10 list-div">
+     <h1>{{cliente.nome}}</h1>
+     <h1>{{cliente.Modelo_Veiculo}}</h1>
+     
+</div> -->
+
+{%endblock%}
